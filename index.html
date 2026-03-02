@@ -85,7 +85,8 @@ header p{font-size:14.5px;color:var(--fg50);max-width:40ch;margin:0 auto;font-we
 .sep{border:none;border-top:1px solid var(--fg08);margin:28px 0}
 
 /* field */
-.field label{display:block;font-size:12px;color:var(--fg50);font-weight:400;letter-spacing:0.2px;margin-bottom:7px}
+.field label{display:flex;align-items:center;gap:7px;font-size:12px;color:var(--fg50);font-weight:400;letter-spacing:0.2px;margin-bottom:7px}
+.req-badge{font-size:6.5px;font-weight:700;letter-spacing:0.6px;text-transform:uppercase;color:#0A181B;background:#B8A07A;padding:1px 3.5px;border-radius:2px;flex-shrink:0}
 .field input[type="text"],
 .field input[type="email"],
 .field input[type="tel"],
@@ -203,17 +204,17 @@ header p{font-size:14.5px;color:var(--fg50);max-width:40ch;margin:0 auto;font-we
           <div class="section-label">Contact</div>
           <div class="grid grid-2" style="margin-bottom:18px">
             <div class="field">
-              <label for="firstName">First name</label>
+              <label for="firstName">First name <span class="req-badge">Required</span></label>
               <input id="firstName" name="First Name" type="text" autocomplete="given-name" placeholder="Jane" required>
             </div>
             <div class="field">
-              <label for="lastName">Last name</label>
+              <label for="lastName">Last name <span class="req-badge">Required</span></label>
               <input id="lastName" name="Last Name" type="text" autocomplete="family-name" placeholder="Smith" required>
             </div>
           </div>
           <div class="grid grid-2">
             <div class="field">
-              <label for="email">Email</label>
+              <label for="email">Email <span class="req-badge">Required</span></label>
               <input id="email" name="Email" type="email" autocomplete="email" placeholder="jane@example.com" required>
             </div>
             <div class="field">
@@ -228,7 +229,7 @@ header p{font-size:14.5px;color:var(--fg50);max-width:40ch;margin:0 auto;font-we
           <div class="section-label">Project</div>
           <div class="grid grid-2" style="margin-bottom:18px">
             <div class="field">
-              <label for="projectType">Type of project</label>
+              <label for="projectType">Type of project <span class="req-badge">Required</span></label>
               <select id="projectType" name="Project Type" required>
                 <option value="">Select one</option>
                 <option>New home</option>
@@ -240,7 +241,7 @@ header p{font-size:14.5px;color:var(--fg50);max-width:40ch;margin:0 auto;font-we
               </select>
             </div>
             <div class="field">
-              <label for="location">Project location</label>
+              <label for="location">Project location <span class="req-badge">Required</span></label>
               <input id="location" name="Location" type="text" placeholder="City, State" required>
             </div>
           </div>
