@@ -233,7 +233,7 @@ header p{font-size:14.5px;color:var(--fg50);max-width:40ch;margin:0 auto;font-we
             </div>
             <div class="field">
               <label for="phone">Phone</label>
-              <input id="phone" name="Phone" type="tel" autocomplete="tel" placeholder="(206) 555-0100" maxlength="14" inputmode="tel" />
+              <input id="phone" name="Phone" type="tel" autocomplete="tel" placeholder="(206) 555-0100" maxlength="14" inputmode="tel" required>
             </div>
           </div>
 
@@ -398,6 +398,12 @@ header p{font-size:14.5px;color:var(--fg50);max-width:40ch;margin:0 auto;font-we
 
     if(!val("projectType")){ markErr("projectType"); ok=false; }
     if(!val("location")){ markErr("location"); ok=false; }
+
+    var phoneVal = val("phone").replace(/\D/g,"");
+    if(phoneVal.length !== 10){
+      markErr("phone");
+      ok = false;
+    }
 
     if(!consent.checked){
       status.textContent="Please confirm you'd like to be contacted.";
